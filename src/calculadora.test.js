@@ -1,10 +1,14 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 import { render, screen } from '@testing-library/react';
 import Calculadora from './calculadora';
 
-test('renders learn react link', () => {
-  render(<Calculadora />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+describe('Calculadora', () => {
+  test('deve renderizar o componente sem erros', () => {
+    render(<Calculadora />);
+    const linkElement = screen.getByText(/learn react/i);
+    expect(linkElement).toBeInTheDocument();
+  });
 });
+
+
